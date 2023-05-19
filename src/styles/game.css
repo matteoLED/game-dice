@@ -1,0 +1,145 @@
+/* Game Container */
+
+
+/* .image{
+background-image: url('/public/fondImage.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+} */
+.game-container {
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 80px auto;
+    max-height: 800px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(22, 220, 32, 0.43);
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Players Container */
+.players-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;  
+    padding: 20px;
+    background-color: #fff;
+    
+}
+
+
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(22, 220, 32, 0.43);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 0.2rem;
+    height: 60px;
+    width: 90px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;    
+    transition: all 0.3s ease-in-out;
+
+}
+.score-container:hover {
+    opacity: 0.8;
+    background-color: blue;
+}
+
+
+.player-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+
+}
+
+
+/* Player Container */
+.player-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+/* Player Name */
+.player-name {
+   
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.icon {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5rem;
+    font-weight: bold;
+    background-size: cover;
+    /* margin: 35%; */
+    border-radius: 50%;
+
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+
+}
+.icon:hover {
+    opacity: 0.5;
+   
+    background-size: cover;
+}
+
+/* Player Score */
+.player-score {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Dice Roll Container */
+.dice-roll-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* Dice Roll Image */
+.dice-roll-image {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+/* Dice Roll Value */
+.dice-roll-value {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.click:hover {
+    opacity: 0.3;
+}
