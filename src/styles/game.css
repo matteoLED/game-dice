@@ -107,7 +107,6 @@ display: flex;
 }
 .icon:hover {
     opacity: 0.5;
-   
     background-size: cover;
 }
 
@@ -142,4 +141,7 @@ display: flex;
 
 .click:hover {
     opacity: 0.3;
+}
+.active {
+    color: blue;
 }
