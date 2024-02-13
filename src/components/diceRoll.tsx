@@ -12,9 +12,10 @@ const buttonStyles = {
   backgroundColor: "black",
   color: "white",
   padding: "10px",
-  margin: "0.5rem",
+  margin: "5px",
   borderRadius: "0.2rem",
-  width: "95%",
+  width: "92%",
+  heigth: "100%",
   boxShadow: "none",
   border: "none",
   cursor: "pointer",
@@ -22,6 +23,7 @@ const buttonStyles = {
   fontWeight: "bold",
   letterSpacing: 0.25,
 };
+
 type RefreshIconProps = {
   size?: number;
   color?: string;
@@ -37,17 +39,30 @@ const RefreshIcon = ({ size = 24, color = "black" }: RefreshIconProps) => {
     </svg>
   );
 };
+
 type DiceRollProps = {
   onRoll: (value: number) => void;
+  onNextPlayer: () => void;
 };
 
 const DiceRoll = ({ onRoll }: DiceRollProps) => {
-  const [diceValue, setDiceValue] = useState<number>(1);
+  const [diceValue, setDiceValue] = useState<number>(0);
+  const [rollsCount, setRollsCount] = useState<number>(0);
 
   const rollDice = () => {
     const value = Math.floor(Math.random() * 6) + 1;
     setDiceValue(value);
     onRoll(value);
+
+    // Augmenter le nombre de lancers de dé effectués
+    const updatedRollsCount = rollsCount + 1;
+    setRollsCount(updatedRollsCount);
+
+    // Vérifier si le joueur a effectué deux lancers de dé
+    if (updatedRollsCount === 2) {
+      // Passer au joueur suivant (appeler une fonction de votre choix ici)
+      setRollsCount(0);
+    }
   };
 
   const renderDice = (value: number) => {
