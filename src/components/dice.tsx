@@ -26,7 +26,7 @@ const Dice: React.FC<DiceProps> = ({ value, rollDice }) => {
   ];
 
   return (
-    <div className="dice" onClick={rollDice}>
+    <div className="dice-roll-container" onClick={rollDice}>
       {diceIcons[value]}
     </div>
   );
